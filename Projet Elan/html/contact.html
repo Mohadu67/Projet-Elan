@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvelle Vie, Nouveau Code</title>
+    <link rel="icon" href="/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Honk&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <img id="logo" src="/logo/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="/html/index.html">Accueil</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+                <li><a href="/html/Devine.html">Devine</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="h1">
+            <h1>De la Restauration à l'Informatique <br> Mon Voyage Vers la Passion</h1>
+            <img id="tofpro" src="/logo/photoprofil.jpg" alt="photoprofil">
+        </section>
+
+        <section>
+            <form action="contact.html" method="get" id="contactForm">
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" autofocus required>
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" required>
+                    <label for="mail">Mail</label>
+                    <input type="text" name="mail" id="mail" required>
+                    <label for="telephone">Telephone</label>
+                    <input type="tel" name="telephone" id="telephone" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact</legend>
+                    <label for="question">Vos questions</label>
+                    <textarea id="question" rows=""></textarea>
+                </fieldset>
+
+                <input id="envoyer" type="submit" value="Envoyer">
+
+                <script>
+                    document.getElementById('contactForm').onsubmit = function(event) {
+                        event.preventDefault(); 
+                
+                        Swal.fire({
+                            title: 'Message Envoyé!',
+                            text: 'A BIENTOT ',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                document.getElementById('contactForm').submit();
+                            }
+                        });
+                    };
+                </script>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/mohammed-hamiani-461561243" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/berkou_kess" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </footer>
+</body>
+</html>
